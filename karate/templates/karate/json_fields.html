@@ -5,7 +5,9 @@
 </head>
 <body>
     {% if fields %}
-        <h2>{{ fields }}</h2>
+        {% for key, value in fields.items %}
+            {{ key }}: {{ value }}
+        {% endfor %}
         <a href="/">Volver al home</a>
     {% else %}
         <form method="POST">
