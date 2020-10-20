@@ -5,10 +5,11 @@
 </head>
 <body>
     {% if fields %}
-        {% for key, value in fields.items %}
-            {{ key }}: {{ value }}
-        {% endfor %}
+        <ul>
+            {% include "karate/menu.html" %}
+        </ul>
         <a href="/">Volver al home</a>
+        <button>Generar JSON Karate</button>
     {% else %}
         <form method="POST">
         {% csrf_token %}
