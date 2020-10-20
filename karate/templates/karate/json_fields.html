@@ -4,9 +4,15 @@
     <title>JSON Formater</title>
 </head>
 <body>
-    <form>
-        <textarea id="w3review" name="w3review" rows="4" cols="50">{{ fields }}</textarea>
-        <button>Extraer campos</button>
-    </form>
+    {% if fields %}
+        <h2>{{ fields }}</h2>
+        <a href="/">Volver al home</a>
+    {% else %}
+        <form method="POST">
+        {% csrf_token %}
+            <textarea rows="4" cols="50" name="content"></textarea>
+            <button type="submit">Extraer campos</button>
+        </form>
+    {% endif %}
 </body>
 </html>
