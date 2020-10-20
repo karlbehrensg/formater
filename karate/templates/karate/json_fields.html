@@ -13,7 +13,92 @@
     {% else %}
         <form method="POST">
         {% csrf_token %}
-            <textarea rows="4" cols="50" name="content"></textarea>
+            <textarea rows="4" cols="50" name="content">
+                {
+  "_id": "5f8e648efeb69241040b21fa",
+  "index": 0,
+  "guid": "8c9166e8-4179-473a-adfe-7d0eec247b14",
+  "isActive": false,
+  "balance": "$2,087.52",
+  "picture": "http://placehold.it/32x32",
+  "age": 26,
+  "eyeColor": "blue",
+  "name": "Carey Rios",
+  "gender": "female",
+  "company": "SONIQUE",
+  "email": "careyrios@sonique.com",
+  "phone": "+1 (854) 553-3568",
+  "address": "598 Louisiana Avenue, Boykin, Indiana, 1940",
+  "registered": "2018-09-12T06:11:35 +03:00",
+  "latitude": -81.010695,
+  "longitude": -19.08424,
+  "tags": [
+    "reprehenderit",
+    "laborum",
+    "excepteur",
+    "consectetur",
+    "laborum",
+    "veniam",
+    "id"
+  ],
+  "friends": [
+    {
+      "id": 0,
+      "name": "Marylou Good",
+      "last": [
+        {
+          "item1": 23,
+          "item2": 22
+        },
+        {
+          "item1": 31,
+          "item2": 28
+        },
+        {
+          "item1": 31,
+          "item2": 27
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Charlotte Pena",
+      "last": [
+        {
+          "item1": 23,
+          "item2": 20
+        },
+        {
+          "item1": 35,
+          "item2": 30
+        },
+        {
+          "item1": 32,
+          "item2": 39
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Moss Booth",
+      "last": [
+        {
+          "item1": 40,
+          "item2": 24
+        },
+        {
+          "item1": 30,
+          "item2": 35
+        },
+        {
+          "item1": 28,
+          "item2": 25
+        }
+      ]
+    }
+  ]
+}
+            </textarea>
             <button type="submit">Extraer campos</button>
         </form>
     {% endif %}

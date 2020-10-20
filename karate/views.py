@@ -3,13 +3,15 @@ import json
 
 
 def take_fields(data):
-    fields = {}
+    fields = []
     for key in data:
         if type(data[key]) == list and type(data[key][0]) == dict:
+            list_father = [key]
             for item in data[key]:
-                fields[key] = take_fields(item)
+                list_father.append(take_fields(item))
+            fields.append(list_father)
         else:
-            fields[key] = None
+            fields.append([key])
     return fields
 
 
