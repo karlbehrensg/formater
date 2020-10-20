@@ -1,12 +1,10 @@
 {% for key, value in fields.items %}
     <li>
+        <input type="checkbox"/> {{ key }} <br>
         {% if value %}
-            <input type="checkbox"/> {{ key }} <br>
             <ul>
                {% include "karate/menu.html" with fields=value %}
             </ul>
-        {% else %}
-            <input type="checkbox"/> {{ key }} <br>
         {% endif %}
     </li>
 {% endfor %}
